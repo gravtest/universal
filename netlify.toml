@@ -1,14 +1,6 @@
 [build]
-publish = "exampleSite/public"
-command = """hugo \
-  --source exampleSite \
-  --config exampleSite/config.toml \
-  --themesDir ../.. \
-  --theme repo \
-  --baseURL https://hugo-hero.netlify.com/"""
+  command = "hugo"
+  publish = "public"
 
-[context.deploy-preview.environment]
-  HUGO_VERSION = "0.51"
-
-[context.production.environment]
+[build.environment]
 HUGO_VERSION = "0.51"
